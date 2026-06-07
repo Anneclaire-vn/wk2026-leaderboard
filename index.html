@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WK2026 Leaderboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .leaderboard {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        th {
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+        }
+
+        td {
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        tbody tr {
+            transition: background-color 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .rank {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.2em;
+            width: 60px;
+        }
+
+        .medal {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            color: white;
+            margin-right: 10px;
+        }
+
+        .medal.gold {
+            background: #FFD700;
+            color: #333;
+        }
+
+        .medal.silver {
+            background: #C0C0C0;
+            color: #333;
+        }
+
+        .medal.bronze {
+            background: #CD7F32;
+            color: white;
+        }
+
+        .name {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .score {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #667eea;
+            text-align: right;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏆 WK2026 Leaderboard</h1>
+            <p>Weekly Competition Rankings</p>
+        </div>
+
+        <div class="leaderboard">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 80px;">Rank</th>
+                        <th style="flex: 1;">Participant</th>
+                        <th style="width: 150px; text-align: right;">Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="rank"><span class="medal gold">1</span></td>
+                        <td class="name">Team A</td>
+                        <td class="score">1,250</td>
+                    </tr>
+                    <tr>
+                        <td class="rank"><span class="medal silver">2</span></td>
+                        <td class="name">Team B</td>
+                        <td class="score">1,180</td>
+                    </tr>
+                    <tr>
+                        <td class="rank"><span class="medal bronze">3</span></td>
+                        <td class="name">Team C</td>
+                        <td class="score">1,120</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="name">Team D</td>
+                        <td class="score">1,050</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">5</td>
+                        <td class="name">Team E</td>
+                        <td class="score">980</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>Last updated: 2026-06-07</p>
+        </div>
+    </div>
+</body>
+</html>
